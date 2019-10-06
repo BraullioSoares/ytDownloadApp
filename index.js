@@ -6,7 +6,7 @@ const port = 4000;
 
 app.use(cors());
 app.use('/static', express.static(__dirname + '/public'));
-app.listen(process.env.PORT || 5000);
+app.listen(process.env.PORT || 5000, '0.0.0.0');
 
 app.get('/download', (req, res) => {
     var URL = req.query.URL;
