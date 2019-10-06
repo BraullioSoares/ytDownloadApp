@@ -5,7 +5,7 @@ const app = express();
 const port = 4000;
 
 app.use(cors());
-
+app.use('/static', express.static(__dirname + '/public'));
 app.listen(port, () => {
     console.log("Server is runnin on port " + port);
 });
@@ -18,5 +18,9 @@ app.get('/download', (req, res) => {
     ytdl(URL, {
         format: 'mp4'
     }).pipe(res);
+});
+
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/index.html');
 });
 
