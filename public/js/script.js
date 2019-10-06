@@ -7,5 +7,5 @@ convertBtn.addEventListener('click', () => {
 });
 
 function sendURL(URL) {
-    window.location.href = `https://mom-youtube-downloader.herokuapp.com/download?URL=${URL}`;
+    window.location.href = `/download?URL=${URL}`;
 }
