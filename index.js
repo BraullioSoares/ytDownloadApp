@@ -6,7 +6,7 @@ const serverPort = process.env.PORT || 1337;
 
 app.use(cors());
 app.use('/static', express.static(__dirname + '/public'));
-app.listen(serverPort, function () {
+app.listen(serverPort, '127.0.0.1', function () {
     console.log("Express is running on port " + serverPort);
 });
 
